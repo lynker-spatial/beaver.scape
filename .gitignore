@@ -27,3 +27,11 @@ dist-ssr
 **/build/**/*.mbtiles
 /scripts/tiles/build/**/*.mbtiles
 /scripts/tiles/build/*.mbtiles
+/public/
+
+# Large tile artifacts (keep out of git)
+**/*.pmtiles
+**/*.fgb
+/public/*.pmtiles
+/scripts/tiles/build/*.fgb
+/scripts/tiles/build/**/*.fgb
