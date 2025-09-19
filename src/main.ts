@@ -24,11 +24,11 @@ import maplibregl, { NavigationControl } from "maplibre-gl";
 
 // Place tmp.pmtiles at: public/tiles/tmp.pmtiles
 // Vite will serve it at: <BASE_URL>/tiles/tmp.pmtiles
-const tiles_url = pmtiles://https://data.lynker-spatial.com/vector-resources/beaver-scape/beaver-scape.pmtiles
+const tiles_url = "https://data.lynker-spatial.com/vector-resources/beaver-scape/beaver-scape.pmtiles"
 
 // Debug: verify URL actually used by browser
 // eslint-disable-next-line no-console
-console.log("PMTiles URL:", tiles_url);
+// console.log("PMTiles URL:", tiles_url);
 
 // Source-layer names inside the PMTiles
 const LAYERS = {
@@ -57,32 +57,32 @@ const OWNER_COLORS: Record<string, string> = {
 };
 
 /** Substring aliases for owner categories (used by legend filtering). */
-const OWNER_ALIASES: Record<string, string[]> = {
-  "American Indian Lands": ["american indian", "tribal", "ute"],
-  "Federal": [
-    "federal",
-    "blm",
-    "bureau of land",
-    "usfs",
-    "forest service",
-    "nps",
-    "park service",
-    "fws",
-    "fish and wildlife"
-  ],
-  "State": [
-    "state",
-    "colorado parks and wildlife",
-    "cpw",
-    "state land board"
-  ],
-  "Local Government": ["county", "city", "town", "municipal"],
-  "Non-Governmental Organization": ["ngo", "non-governmental", "conservancy", "land trust", "trust"],
-  "Private": ["private"],
-  "Regional Agency Special District": ["district", "authority", "metro", "water"],
-  "Joint": ["joint"],
-  "Unknown": ["unknown", ""]
-};
+// const OWNER_ALIASES: Record<string, string[]> = {
+//   "American Indian Lands": ["american indian", "tribal", "ute"],
+//   "Federal": [
+//     "federal",
+//     "blm",
+//     "bureau of land",
+//     "usfs",
+//     "forest service",
+//     "nps",
+//     "park service",
+//     "fws",
+//     "fish and wildlife"
+//   ],
+//   "State": [
+//     "state",
+//     "colorado parks and wildlife",
+//     "cpw",
+//     "state land board"
+//   ],
+//   "Local Government": ["county", "city", "town", "municipal"],
+//   "Non-Governmental Organization": ["ngo", "non-governmental", "conservancy", "land trust", "trust"],
+//   "Private": ["private"],
+//   "Regional Agency Special District": ["district", "authority", "metro", "water"],
+//   "Joint": ["joint"],
+//   "Unknown": ["unknown", ""]
+// };
 
 /** Ownership coloring: robust matcher on d_Mang_Type (case-insensitive),
  * with aliases for common agency names.
@@ -566,12 +566,13 @@ map.once("load", async () => {
   };
 
   const popupRoot = document.createElement("span");
-  function escapeHtml(s: unknown): string {
-    return String(s ?? "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
-  }
+
+  // function escapeHtml(s: unknown): string {
+  //   return String(s ?? "")
+  //     .replace(/&/g, "&amp;")
+  //     .replace(/</g, "&lt;")
+  //     .replace(/>/g, "&gt;");
+  // }
 
   async function popupText( 
     _root: HTMLElement,
