@@ -1,0 +1,22 @@
+#ls-logo-maplibre {
+    width: 10rem;
+    height: 3rem;
+}
+
+#ls-logo-maplibre svg>g {
+    -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+#ls-logo-maplibre a {
+    fill-opacity: 0.5;
+    transition: fill-opacity 100ms ease-in-out;
+}
+
+#ls-logo-maplibre a:hover {
+    fill-opacity: 0.75;
+}
+
+#ls-logo-maplibre path:last-child {
+    fill: #5dccff;
+}
