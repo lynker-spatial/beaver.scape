@@ -24,4 +24,6 @@ dist-ssr
 *.sw?
 
 /data/
-/scripts/tiles/build/
+**/build/**/*.mbtiles
+/scripts/tiles/build/**/*.mbtiles
+/scripts/tiles/build/*.mbtiles
