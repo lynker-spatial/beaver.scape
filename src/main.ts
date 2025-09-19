@@ -24,7 +24,7 @@ import maplibregl, { NavigationControl } from "maplibre-gl";
 
 // Place tmp.pmtiles at: public/tiles/tmp.pmtiles
 // Vite will serve it at: <BASE_URL>/tiles/tmp.pmtiles
-const tiles_url = pmtiles://https://data.lynker-spatial.com/vector-resources/beaver-scape/whateritsnameis.pmtiles
+const tiles_url = pmtiles://https://data.lynker-spatial.com/vector-resources/beaver-scape/beaver-scape.pmtiles
 
 // Debug: verify URL actually used by browser
 // eslint-disable-next-line no-console
