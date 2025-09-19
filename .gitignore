@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 /data/
-/scripts/build/
+/scripts/tiles/build/
